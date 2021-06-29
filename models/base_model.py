@@ -8,10 +8,19 @@ from datetime import datetime
 class BaseModel:
     """BaseModel method"""
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """__init__ method"""
-        self.id = str(uuid4())
-        self.created_at = self.updated_at = datetime.now()
+        if bool(kwargs):
+            format_time = "%Y-%m-%dT%H:%M:%S.%f"
+            for key, value in kwargs.items():
+                if key == "__class__":
+                    continue
+                if key == "created_at" or key == "updated_at":
+                    value = datetime.strptime(value, format_time)
+                setattr(self, key, value)
+        else:
+            self.id = str(uuid4())
+            self.created_at = self.updated_at = datetime.now()
 
     def __str__(self):
         """__str__ method"""
@@ -78,3 +87,5 @@ if __name__ == "__main__":
         # TODO validate the formart
     else:
         print("[FAIL] isn't a dictionary")
+
+    print(instance_bm.to_dict())
