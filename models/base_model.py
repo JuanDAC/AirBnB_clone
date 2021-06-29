@@ -1,5 +1,6 @@
-#!/bin/usr/python3
-""" file of the BaseModel """
+#!/usr/bin/python3
+""" This module declares the BaseModel that implemente the generic methods
+of others class"""
 from uuid import uuid4
 from datetime import datetime
 
