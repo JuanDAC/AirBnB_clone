@@ -3,6 +3,7 @@
 of others class"""
 from uuid import uuid4
 from datetime import datetime
+from models import storage
 
 
 class BaseModel:
@@ -21,6 +22,7 @@ class BaseModel:
         else:
             self.id = str(uuid4())
             self.created_at = self.updated_at = datetime.now()
+        storage.new(self)
 
     def __str__(self):
         """__str__ method"""
@@ -30,6 +32,7 @@ class BaseModel:
     def save(self):
         """seve method"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """seve to_dict"""
