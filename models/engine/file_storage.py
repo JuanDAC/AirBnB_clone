@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from json import dump, load
 
-config_open = { errors: "ignore"}
+"""config_open = { "errors": "ignore", encoding: "utf-8"}"""
 
 """file_storage.py"""
 class FileStorage:
@@ -19,14 +19,17 @@ class FileStorage:
         json_serialized = dict()
         for key, value in self.__objects.items():
             json_serialized[key] = value.to_dict()
-        with open(self.__file_path, 'w', **config_open) as current_file:
+        with open(self.__file_path, 'w', encoding="utf-8") as current_file:
             dump(json_serialized, current_file)
 
     def reload(self):
         from models.base_model import BaseModel
-        with open(self.__file_path, 'r', **config_open) as current_file:
-            json_deserialized = load(current_file)
-            for key, value in json_deserialized.items():
-                instance_format = "{}(**value)".format(value.__class__)
-                self.__objects[key] = eval(instance_format)
+        try:
+            with open(self.__file_path, 'r') as current_file:
+                json_deserialized = load(current_file)
+                for key, value in json_deserialized.items():
+                    instance_format = "{}(**value)".format(value["__class__"])
+                    self.__objects[key] = eval(instance_format)
+        except (FileNotFoundError):
+            pass
 
