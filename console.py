@@ -2,15 +2,21 @@
 """ command line insterprete of a AirBnB """
 import cmd
 from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
 from models import storage
 import models
 
 def valid_line(line):
-        if not line:
-            print("** class name missing **")
-            return False
-        else:
-            return True
+    if not line:
+        print("** class name missing **")
+        return False
+    else:
+        return True
 
 class HBNBCommand(cmd.Cmd):
     """
