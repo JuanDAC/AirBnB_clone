@@ -1,0 +1,93 @@
+
+.filters {
+	border-radius: var(--filters__border_radius);
+	box-shadow: var(--filters__border);
+	display: grid;
+	grid-template-columns: repeat(4, minmax(min-content, 25%));
+	gap: var(--filters__gap);
+}
+
+
+.filters button {
+	font-weight: var(--filters-title__weight);
+	border-radius: var(--filters__border_radius);
+	width: var(--filters_button__width);
+	height: var(--filters_button__height);
+	grid-column-start: 4;
+	align-self: center;
+	justify-self: flex-end;
+	margin-right: var(--filters_button__margin_right);
+	background-color: var(--filters_button__background);
+	color: var(--filters_button__color);
+}
+
+.filters button:hover {
+	filter: opacity(90%);
+}
+
+.filters > *:not(button)
+{
+	display: flex;
+	flex-flow: column wrap;
+	place-content: center;
+	position: relative;
+}
+
+.filters > *:not(button) h3
+{
+	font-weight: var(--filters-title__weight);
+	font-size: var(--common_button__font-size);
+	white-space: nowrap;
+}
+
+.filters > *:not(button) h4
+{
+	font-weight: var(--filters_subtitle__weight);
+	white-space: nowrap;
+}
+.filters > *:first-child:not(button)
+{
+	box-shadow: var(--filters_first__border_right);
+}
+.filters > *:first-child:not(button) > *
+{
+	margin: 0px var(--filters__gap);
+}
+
+.popover
+{
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	width: calc(100% - 2em);
+	transform: translateY(100%);
+	background-color: #FAFAFA;
+	box-shadow: 0 0 0 1px #DDD;
+	border-radius: 4px;
+	padding: 1em;
+	padding-bottom: 2em;
+}
+
+.popover > h2
+{
+	list-style: none;
+	font-size: 16px;
+	margin: 0.67em 0.47em 0.47em;
+}
+
+.popover > li
+{
+	list-style: none;
+	margin: 0.47em 1.7em;
+}
+
+.filters > *:not(botton):hover > .popover
+{
+	display: block;
+}
+
+.filters > *
+{
+	cursor: pointer;
+}
+

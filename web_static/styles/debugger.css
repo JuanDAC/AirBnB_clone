@@ -1,0 +1,22 @@
+
+
+:root {
+	--debugger-color: red;
+	--debugger-size: 2px;
+}
+
+*[debugger],
+*[self-debugger] {
+	box-shadow: 0px 0px 0px var(--debugger-size) inset var(--debugger-color) !important;
+}
+
+*[debugger] *,
+*[children-debugger] * {
+	box-shadow: 0px 0px 0px var(--debugger-size) inset var(--debugger-color) !important;
+}
+
+
+
+
+
+

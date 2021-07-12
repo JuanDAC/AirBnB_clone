@@ -1,0 +1,9 @@
+
+footer {
+	background-color: var(--footer__background);
+	grid-row-start: 3;
+	display: grid;
+	place-items: center;
+	box-shadow: var(--footer__border_top);
+}
+

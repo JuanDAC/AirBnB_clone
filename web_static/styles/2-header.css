@@ -1,0 +1,6 @@
+
+header {
+	background-color: var(--header__background);
+	height: var(--header__height);
+	width: 100%;
+}

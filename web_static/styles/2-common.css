@@ -1,0 +1,17 @@
+
+:root {
+	--header__background: #F00;
+	--header__height: 70px;
+	--footer__background: #0F0;
+	--footer__height: 60px;
+}
+
+
+body {
+	padding: unset;
+	margin: unset;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}

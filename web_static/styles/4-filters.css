@@ -1,0 +1,25 @@
+
+
+.filters {
+	border-radius: var(--filters__border_radius);
+	box-shadow: var(--filters__border);
+	display: grid;
+	grid-template-columns: repeat(4, minmax(min-content, 25%));
+}
+
+.filters button {
+	font-weight: var(--filters__font_weight);
+	border-radius: var(--filters__border_radius);
+	width: var(--filters_button__width);
+	height: var(--filters_button__height);
+	grid-column-start: 4;
+	align-self: center;
+	justify-self: flex-end;
+	margin-right: var(--filters_button__margin_right);
+	background-color: var(--filters_button__background);
+	color: var(--filters_button__color);
+}
+
+.filters button:hover {
+	filter: opacity(90%);
+}

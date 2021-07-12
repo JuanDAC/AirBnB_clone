@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>AirBnB clone</title>
+		<style>
+			:root {
+				--header__background: #F00;
+				--header__height: 70px;
+				--footer__background: #0F0;
+				--footer__height: 60px;
+			}
+			body {
+				padding: unset;
+				margin: unset;
+				display: grid;
+				grid-template-rows: var(--header__height) 1fr var(--footer__height);
+				min-height: 100vh;
+			}
+			header {
+				background-color: var(--header__background);
+				grid-row-start: 1;
+			}
+			footer {
+				background-color: var(--footer__background);
+				grid-row-start: 3;
+				display: grid;
+				place-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		</header>
+		<main>
+		</main>
+		<footer>
+			Holberton School
+		</footer>
+	</body>
+</html>

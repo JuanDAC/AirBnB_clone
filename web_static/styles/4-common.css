@@ -1,0 +1,141 @@
+
+@property --common-font-size {
+  syntax: "<length>";
+  initial-value: 14px;
+  inherits: true;
+}
+
+@property --common__font-family {
+  syntax: "<custom-ident>";
+  initial-value: Circular,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  inherits: true;
+}
+
+@property --header__background {
+  syntax: "<color>";
+  initial-value: #FFF;
+  inherits: true;
+}
+
+@property --header__height {
+  syntax: "<length>";
+  initial-value: 70px;
+  inherits: true;
+}
+
+@property --header__border_bottom {
+  syntax: "<custom-ident>";
+  initial-value: 0px 1px 0px 0px #CCC;
+  inherits: true;
+}
+
+@property --footer__background {
+  syntax: "<color>";
+  initial-value: #0F0;
+  inherits: true;
+}
+
+@property --footer__height {
+  syntax: "<length>";
+  initial-value: 60px;
+  inherits: true;
+}
+
+@property --header__side_gap {
+  syntax: "<length>";
+  initial-value: 20px;
+  inherits: true;
+}
+
+@property --header_icon__width {
+  syntax: "<length>";
+  initial-value: 142px;
+  inherits: true;
+}
+
+@property --header_icon__height {
+  syntax: "<length>";
+  initial-value: 60px;
+  inherits: true;
+}
+
+@property --header_icon__image{
+  syntax: "<length>";
+  initial-value: url("../images/logo.png");
+  inherits: true;
+}
+
+:root {
+	--common__font-size: 14px;
+	--common__font-family: Circular,"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	--common_button__font-size: 18px;
+
+	--header__background: #FFF;
+	--header__height: 70px;
+	--header__border_bottom: 0px 1px 0px 0px #CCC;
+	--header__side_gap: 20px;
+
+	--header_icon__image: url("../images/logo.png");
+	--header_icon__width: 142px;
+	--header_icon__height: 60px;
+
+	--main__vertical_gap: 30px 0px;
+
+	--filters__height: 70px;
+	--filters__border: 0px 0px 0px 1px inset #DDD;
+	--filters__border_radius: 4px;
+	--filters__gap: 5px;
+
+	--filters_button__width: 80%;
+	--filters_button__height: 48px;
+	--filters_button__margin_right: 30px;
+	--filters_button__background: #FF5A5F;
+	--filters_button__color: #FFFFFF;
+	--filters_first__border_ridht: 1px 0px 0px 0px #DDD;
+	--filters-title__weight: 600;
+	--filters_subtitle__weight: 400;
+	--filters_first__border_right: 1px 0px 0px 0px #DDD;
+
+	--footer__background: #FFF;
+	--footer__height: 60px;
+	--footer__border_top: 0px -1px 0px 0px #CCC;
+
+	--grid_start_to_end: 1 / -1;
+	--grid_center_in_three: 2 / -2;
+	--debugger-color: red;
+}
+
+* {
+	padding: unset;
+	margin: unset;
+	font-size: var(--common__font-size);
+	font-family: var(--common__font-family);
+	transition: all 200ms ease-out;
+}
+
+body {
+	display: grid;
+	grid-template-rows: var(--header__height) 1fr var(--footer__height);
+	grid-template-columns: 1fr minmax(min-content, 1000px) 1fr;
+	min-height: 100vh;
+	column-gap: var(--header__side_gap);
+}
+
+button {
+	font-size: var(--common_button__font-size);
+	border: none;
+}
+
+body > * {
+	grid-column: var(--grid_start_to_end);
+}
+
+.container {
+	margin: var(--main__vertical_gap);
+	grid-row-start: 2;
+	grid-column: var(--grid_center_in_three);
+	display: grid;
+	grid-template-rows: var(--filters__height) 1fr;
+}
+

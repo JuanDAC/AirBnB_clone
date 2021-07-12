@@ -1,0 +1,98 @@
+
+@property --common-font-size {
+  syntax: "<length>";
+  initial-value: 14px;
+  inherits: true;
+}
+
+@property --common__font-family {
+  syntax: "<custom-ident>";
+  initial-value: Circular,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  inherits: true;
+}
+
+@property --header__background {
+  syntax: "<color>";
+  initial-value: #FFF;
+  inherits: true;
+}
+
+@property --header__height {
+  syntax: "<length>";
+  initial-value: 70px;
+  inherits: true;
+}
+
+@property --header__border_bottom {
+  syntax: "<custom-ident>";
+  initial-value: 0px 1px 0px 0px #CCC;
+  inherits: true;
+}
+
+@property --footer__background {
+  syntax: "<color>";
+  initial-value: #0F0;
+  inherits: true;
+}
+
+@property --footer__height {
+  syntax: "<length>";
+  initial-value: 60px;
+  inherits: true;
+}
+
+@property --header__side_gap {
+  syntax: "<length>";
+  initial-value: 20px;
+  inherits: true;
+}
+
+@property --header_icon__width {
+  syntax: "<length>";
+  initial-value: 142px;
+  inherits: true;
+}
+
+@property --header_icon__height {
+  syntax: "<length>";
+  initial-value: 60px;
+  inherits: true;
+}
+
+@property --header_icon__image{
+  syntax: "<length>";
+  initial-value: url("../images/logo.png");
+  inherits: true;
+}
+
+:root {
+	--common__font-size: 14px;
+	--common__font-family: Circular,"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	--header__background: #FFF;
+	--header__height: 70px;
+	--header__border_bottom: 0px 1px 0px 0px #CCC;
+	--header__side_gap: 20px;
+
+	--header_icon__image: url("../images/logo.png");
+	--header_icon__width: 142px;
+	--header_icon__height: 60px;
+
+	--footer__background: #FFF;
+	--footer__height: 60px;
+	--footer__border_top: 0px -1px 0px 0px #CCC;
+}
+
+* {
+	padding: unset;
+	margin: unset;
+	font-size: var(--common__font-size);
+	font-family: var(--common__font-family);
+}
+
+body {
+	display: grid;
+	grid-template-rows: var(--header__height) 1fr var(--footer__height);
+	min-height: 100vh;
+}
+
