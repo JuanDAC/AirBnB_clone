@@ -1,0 +1,16 @@
+
+header {
+	background-color: var(--header__background);
+	grid-row-start: 1;
+	box-shadow: var(--header__border_bottom);
+	display: flex;
+	align-items: center;
+	padding: 0px var(--header__side_gap);
+}
+
+.icon {
+	background-image: var(--header_icon__image);
+	background-size: var(--header_icon__width) var(--header_icon__height);
+	width: var(--header_icon__width);
+	height: var(--header_icon__height);
+}

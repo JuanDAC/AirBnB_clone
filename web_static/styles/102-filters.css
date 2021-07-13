@@ -105,3 +105,9 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.filters > *:not(button) h4 {
+		display: none;
+	}
+
+}
