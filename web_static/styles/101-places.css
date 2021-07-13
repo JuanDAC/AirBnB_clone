@@ -28,7 +28,7 @@ article {
 	grid-auto-rows: min-content;
 	align-items: center;
 	justify-content: center;
-	row-gap: 4px;
+	gap: 4px;
 }
 
 article > * {

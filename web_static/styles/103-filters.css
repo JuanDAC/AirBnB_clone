@@ -6,7 +6,6 @@
 	grid-template-columns: repeat(4, minmax(min-content, 25%));
 }
 
-
 .filters button {
 	font-weight: var(--filters-title__weight);
 	border-radius: var(--filters__border_radius);
@@ -57,15 +56,16 @@
 {
 	position: absolute;
 	bottom: 0px;
-	width: calc(100% - 2em);
+	width: calc(100% - 2vmin);
 	transform: translateY(100%);
 	background-color: #FAFAFA;
 	box-shadow: 0 0 0 1px #DDD;
 	border-radius: 4px;
-	padding: 1em;
-	padding-bottom: 2em;
+	padding: 1vmin;
+	padding-bottom: 2vmin;
 	display: none;
 	visibility: hidden;
+	left: 0px;
 }
 
 .popover > h2
@@ -91,11 +91,6 @@
 	animation-fill-mode: forwards;
 }
 
-.filters > *
-{
-	cursor: pointer;
-}
-
 @keyframes show-menu {
 	from {
 		display: block;
@@ -112,4 +107,46 @@
 		display: none;
 	}
 
+	.filters > *:not(botton):hover > .popover,
+	.popover {
+		animation-name: none;
+		width: calc(100vw - (2vmin + 20px));
+		position: fixed;
+		left: 0px;
+		top: 71px;
+		z-index: 10;
+		transform: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		overflow-y: auto;
+		overflow-x: hidden;
+		justify-content: flex-start;
+		transition: none;
+	}
+
+	.popover > h2 {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		user-select: none;
+	}
+
+	.popover > li {
+		display: grid;
+		place-items: center;
+		padding-top: 3em;
+		padding-bottom: 3em;
+		width: 100%;
+		cursor: pointer;
+		box-shadow: 20vw 0px 20vw -20vw inset #FF5A5F44;
+		transition: box-shadow 400ms;
+		border-radius: 4px;
+	}
+
+	.popover > li:hover {
+		box-shadow: 0vw 0px 10vw 0px inset #FF5A5F33;
+	
+
 }
+
