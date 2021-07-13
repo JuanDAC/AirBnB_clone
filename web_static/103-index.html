@@ -4,24 +4,25 @@
 		<meta charset="utf-8"/>
 		<title>AirBnB clone</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<link type="text/css" rel="stylesheet" href="./styles/103-common.css"/>
 		<link type="text/css" rel="stylesheet" href="./styles/103-footer.css"/>
 		<link type="text/css" rel="stylesheet" href="./styles/103-header.css"/>
 		<link type="text/css" rel="stylesheet" href="./styles/103-filters.css"/>
 		<link type="text/css" rel="stylesheet" href="./styles/103-places.css"/>
 		<link rel="icon" href="images/icon.png"/>
-		<meta name="description" content="Find vacation rentals, cabins, beach houses, unique homes and experiences around the world - all made possible by hosts on Airbnb.">
+		<meta name="description" content="Find vacation rentals, cabins, beach houses, unique homes and experiences around the world - all made possible by hosts on Airbnb Clone.">
 	</head>
 	<body>
-		<header>
+		<header aria-label="Header of AirBnB clone">
 			<div class="icon" ></div>
 		</header>
-		<main class="container">
-			<section class="filters">
-				<div class="locations">
+		<main class="container" aria-label="Main content">
+			<section class="filters" aria-label="Search and filters options">
+				<div class="locations" aria-label="Dropdown that deploy the filters of locations" role="button" accesskey="l" data-message="This is the hover to show the filters by Locations" tabindex="0">
 					<h3>States</h3>
 					<h4>California, Arizona</h4>
-					<ul class="popover" >
+					<ul class="popover" aria-label="Each filter by location" >
 						<h2>Arizona:</h2>
 						<li>Page </li>
 						<li>Page 2 </li>
@@ -30,54 +31,49 @@
 						<li>Los Altos</li>
 					</ul>
 				</div>
-				<div class="amenities">
+				<div class="amenities" aria-label="Dropdown that deploy the filters of amenities" role="button" accesskey="a" data-message="This is the hover to show the filters by Amenities" tabindex="0">
 					<h3>Amenities</h3>
 					<h4>Internet, kitchan</h4>
-					<ul class="popover" >
+					<ul class="popover" aria-label="Each filter by amenities">
 						<li>Internet</li>
 						<li>TV</li>
 						<li>Kitchet</li>
 						<li>Iron</li>
 					</ul>
 				</div>
-				<button name="button" type="button">Search</button>
+				<button name="button" type="button" aria-label="This is the button to search" data-message="This is the button to search vacation rentals, cabins, beach houses" tabindex="0">Search</button>
 			</section>
-			<section class="places">
+			<section class="places" aria-label="Storage to show the places">
 				<h1>Places</h1>
-				<article>
+				<article aria-label="Place item">
 					<h2>My Home</h2>
-					<div class="price_by_night">$80</div>
-					<div class="information">
-						<div class="max_guest">
-							<figure class="icon_group"></figure>
+					<div class="price_by_night" aria-label="price by night" >$80</div>
+					<div class="information" aria-label="information about this place">
+						<div class="max_guest" aria-label="max guest">
 							2 Guests
 						</div>
-						<div class="number_rooms">
-							<figure class="icon_bed"></figure>
+						<div class="number_rooms" aria-label="number rooms">
 							1 Bedroom
 						</div>
-						<div class="number_bathrooms">
-							<figure class="icon_bath"></figure>
+						<div class="number_bathrooms" aria-label="number bathrooms">
 							1 Bathroom
 						</div>
 					</div>
-					<div class="user">
+					<div class="user" aria-label="The User">
 						<strong>Owner:</strong> John Lennon
 					</div>
-					<div class="description">
+					<div class="description" aria-label="description of the place">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis vulputate interdum. Nullam dolor purus, rhoncus at nisi sit amet, fringilla consequat mauris. 
 					</div>
-					<div class="amenities">
+					<div class="amenities" aria-label="wrapper of amenities">
 						<h2>Amenities</h2>
-						<ul>
-							<li style="--src:url('../images/icon_tv.png');">TV</li>
-							<li style="--src:url('../images/icon_wifi.png');">WIFI</li>
+						<ul aria-label="list of amenities">
 							<li style="--src:url('../images/icon_pets.png');">Pets Fiendly</li>
 						</ul>
 					</div>
-					<div class="reviews">
+					<div class="reviews" aria-label="wrapper of reviews">
 						<h2>Reviews</h2>
-						<ul>
+						<ul aria-label="list of reviews">
 							<li>
 								<h3>From Bob Dylan the 27th January 2017</h3>
 								<p>
@@ -93,88 +89,86 @@
 						</ul>
 					</div>
 				</article>
-				<article>
+				<article aria-label="Place item">
 					<h2>Tyni House</h2>
-					<div class="price_by_night">$65</div>
-					<div class="information">
-						<div class="max_guest">
-							4 Guests
+					<div class="price_by_night" aria-label="price by night" >$65</div>
+					<div class="information" aria-label="information about this place">
+						<div class="max_guest" aria-label="max guest">
+							2 Guests
 						</div>
-						<div class="number_rooms">
-							2 Bedroom
+						<div class="number_rooms" aria-label="number rooms">
+							1 Bedroom
 						</div>
-						<div class="number_bathrooms">
+						<div class="number_bathrooms" aria-label="number bathrooms">
 							1 Bathroom
 						</div>
 					</div>
-					<div class="user">
+					<div class="user" aria-label="The User">
 						<strong>Owner:</strong> John Lennon
 					</div>
-					<div class="description">
-						Mauris at suscipit arcu, sed fermentum justo. Etiam dui libero, hendrerit et nunc sed, pulvinar sollicitudin tortor. Nam mi tellus, interdum non arcu ac, elementum elementum erat. Praesent eu mollis risus, eget volutpat odio. Cras ornare libero vel tristique ornare. Vestibulum quis dictum sem. Nam suscipit maximus dui, eget lacinia mi fermentum nec. Etiam sollicitudin laoreet maximus. Donec consectetur placerat purus non bibendum. In pretium consequat nibh vel porttitor. 
+					<div class="description" aria-label="description of the place">
+						Class aptent taciti sociosqu ad litora torquent per conubia nostra
+						dolor sit amet, consectetur adipiscing elit. Vestibulum convallis vulputate interdum. Nullam dolor purus, rhoncus at nisi sit amet, fringilla consequat mauris. 
 					</div>
-					<div class="amenities">
+					<div class="amenities" aria-label="wrapper of amenities">
 						<h2>Amenities</h2>
-						<ul>
+						<ul aria-label="list of amenities">
 							<li style="--src:url('../images/icon_pets.png');">Pets Fiendly</li>
 						</ul>
 					</div>
-					<div class="reviews">
+					<div class="reviews" aria-label="wrapper of reviews">
 						<h2>Reviews</h2>
-						<ul>
+						<ul aria-label="list of reviews">
 							<li>
 								<h3>From Bob Dylan the 27th January 2017</h3>
 								<p>
-								Sed molestie non sapien a pulvinar. Cras ac dui semper, placerat ante non, laoreet augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed elit lorem. Nam efficitur posuere aliquet. Aliquam erat volutpat. 
+									Mauris at suscipit arcu, sed fermentum justo. Etiam dui libero, hendrerit et nunc sed, pulvinar sollicitudin tortor. Nam mi tellus, interdum non arcu ac, elementum elementum erat. Praesent eu mollis risus, eget volutpat odio. Cras ornare libero vel tristique ornare. 
 								</p>
 							</li>
 						</ul>
 					</div>
 				</article>
-				<article>
+				<article aria-label="Place item">
 					<h2>A Suite</h2>
-					<div class="price_by_night">$190</div>
-					<div class="information">
-						<div class="max_guest">
-							<figure class="icon_group"></figure>
-							6 Guests
+					<div class="price_by_night" aria-label="price by night" >$190</div>
+					<div class="information" aria-label="information about this place">
+						<div class="max_guest" aria-label="max guest">
+							5 Guests
 						</div>
-						<div class="number_rooms">
-							<figure class="icon_bed"></figure>
-							5 Bedroom
+						<div class="number_rooms" aria-label="number rooms">
+							4 Bedroom
 						</div>
-						<div class="number_bathrooms">
-							<figure class="icon_bath"></figure>
-							4 Bathroom
+						<div class="number_bathrooms" aria-label="number bathrooms">
+							3 Bathroom
 						</div>
 					</div>
-					<div class="user">
+					<div class="user" aria-label="The User">
 						<strong>Owner:</strong> John Lennon
 					</div>
-					<div class="description">
-						Etiam non magna odio. Curabitur rutrum libero blandit diam accumsan scelerisque. Donec facilisis vulputate nunc, ut pretium est tincidunt non. Nam sagittis sit amet turpis vitae posuere. Aenean quis tincidunt ligula, sit amet lobortis ipsum. Pellentesque eu nulla sit amet lorem faucibus sodales. Donec porta nisl quis nisi molestie tincidunt.
+					<div class="description" aria-label="description of the place">
+									Vestibulum quis dictum sem. Nam suscipit maximus dui, eget lacinia mi fermentum nec. Etiam sollicitudin laoreet maximus. Donec consectetur placerat purus non bibendum. In pretium consequat nibh vel porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra
 					</div>
-					<div class="amenities">
+					<div class="amenities" aria-label="wrapper of amenities">
 						<h2>Amenities</h2>
-						<ul>
+						<ul aria-label="list of amenities">
 							<li style="--src:url('../images/icon_tv.png');">TV</li>
 							<li style="--src:url('../images/icon_wifi.png');">WIFI</li>
 							<li style="--src:url('../images/icon_pets.png');">Pets Fiendly</li>
 						</ul>
 					</div>
-					<div class="reviews">
+					<div class="reviews" aria-label="wrapper of reviews">
 						<h2>Reviews</h2>
-						<ul>
+						<ul aria-label="list of reviews">
 							<li>
 								<h3>From Bob Dylan the 27th January 2017</h3>
 								<p>
-									Class aptent taciti sociosqu ad litora torquent per conubia nostra
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis vulputate interdum. Nullam dolor purus, rhoncus at nisi sit amet, fringilla consequat mauris sociosqu ad litora torquent per.
 								</p>
 							</li>
 							<li>
 								<h3>From Bob Dylan the 27th January 2017</h3>
 								<p>
-								In quis neque in odio consequat sollicitudin. Morbi a efficitur diam. Ut et mauris a nibh facilisis gravida nec sed sem. Donec vel condimentum magna, in lobortis lectus. Nunc iaculis bibendum dui, a vehicula eros scelerisque a. Donec volutpat massa et metus cursus, non dapibus lacus malesuada.
+									Taciti sociosqu ad litora torquent per conubia.
 								</p>
 							</li>
 						</ul>
@@ -182,7 +176,7 @@
 				</article>
 			</section>
 		</main>
-		<footer>
+		<footer aria-label="Footer of AirBnB clone">
 			Holberton School
 		</footer>
 	</body>

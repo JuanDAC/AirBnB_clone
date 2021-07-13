@@ -65,6 +65,7 @@
 	padding: 1em;
 	padding-bottom: 2em;
 	display: none;
+	visibility: hidden;
 }
 
 .popover > h2
@@ -83,6 +84,7 @@
 .filters > *:not(botton):hover > .popover
 {
 	display: block;
+	visibility: visible;
 	animation-name: show-menu;
 	animation-direction: normal;
 	animation-duration: 300ms;
